@@ -20,15 +20,15 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Red;
 
          Console.Title = "Задача Коллаца";
-         //бесконечный цикл ввода данных - пока пользователь не закроет программу:
+         // Бесконечный цикл ввода данных - пока пользователь не закроет программу:
          while (true)
          {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Введите число для проверки >  ");
             var number = Convert.ToUInt32(Console.ReadLine());
-            //проверяем число:
+            // Проверяем число:
             CollatzRec(number);
-            //вычисляем длину Улама:
+            // Вычисляем длину Улама:
             //int len = UlamLength(number);
             int len = UlamLengthIter(number);
             Console.ForegroundColor = ConsoleColor.Green;
@@ -45,7 +45,7 @@ namespace Recursion
          Console.WriteLine("Шаг " + len + " > " + number);
          if (number <= 1)
          {
-            //выводим длину цикла в текстовое окно:
+            // Ввыводим длину цикла в текстовое окно:
             Console.ForegroundColor = ConsoleColor.Green;
             //Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             return;
@@ -83,10 +83,17 @@ namespace Recursion
          while (number > 1)
          {
             if (number % 2 != 0)
+            {
                number = number * 3 + 1;
-            else number /= 2;
+            }
+            else
+            {
+               number /= 2;
+            }
+
             ++len;
          }
+
          return len;
       }
 
