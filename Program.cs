@@ -29,8 +29,8 @@ namespace Recursion
             //проверяем число:
             CollatzRec(number);
             //вычисляем длину Улама:
-            int len = UlamLength(number);
-            //var len = UlamLengthIter(number);
+            //int len = UlamLength(number);
+            int len = UlamLengthIter(number);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             Console.WriteLine();
@@ -51,15 +51,30 @@ namespace Recursion
             return;
          }
          if (number % 2 != 0)
+         {
             CollatzRec(number * 3 + 1, ++len);
-         else CollatzRec(number / 2, ++len);
+         }
+         else
+         {
+            CollatzRec(number / 2, ++len);
+         }
       }
 
       private static int UlamLength(uint number)
       {
-         if (number <= 1) return 0;
-         if (number % 2 != 0) return 1 + UlamLength(number * 3 + 1);
-         else return 1 + UlamLength(number / 2);
+         if (number <= 1)
+         {
+            return 0;
+         }
+
+         if (number % 2 != 0)
+         {
+            return 1 + UlamLength(number * 3 + 1);
+         }
+         else
+         {
+            return 1 + UlamLength(number / 2);
+         }
       }
 
       private static int UlamLengthIter(uint number)
