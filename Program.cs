@@ -19,10 +19,63 @@ namespace Recursion
          PrintRec(pop, 3);
          Console.ForegroundColor = ConsoleColor.Red;
 
-         Console.ReadKey();
+         Console.Title = "Задача Коллаца";
+         //бесконечный цикл ввода данных - пока пользователь не закроет программу:
+         while (true)
+         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("Введите число для проверки >  ");
+            var number = Convert.ToUInt32(Console.ReadLine());
+            //проверяем число:
+            CollatzRec(number);
+            //вычисляем длину Улама:
+            //var len = UlamLength(number);
+            var len = UlamLengthIter(number);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+         }
+
+         //Console.ReadKey();
       }
 
-      
+      private static void CollatzRec(uint number, int len = 0)
+      {
+         Console.WriteLine("Шаг " + len + " > " + number);
+         if (number <= 1)
+         {
+            //выводим длину цикла в текстовое окно:
+            Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+            return;
+         }
+         if (number % 2 != 0)
+            CollatzRec(number * 3 + 1, ++len);
+         else CollatzRec(number / 2, ++len);
+      }
+
+      private static int UlamLength(uint number)
+      {
+         if (number <= 1) return 0;
+         if (number % 2 != 0) return 1 + UlamLength(number * 3 + 1);
+         else return 1 + UlamLength(number / 2);
+      }
+
+      private static int UlamLengthIter(uint number)
+      {
+         var len = 0;
+         while (number > 1)
+         {
+            if (number % 2 != 0)
+               number = number * 3 + 1;
+            else number /= 2;
+            ++len;
+         }
+         return len;
+      }
+
+
 
       public static void Print(string str, int n)
       {
