@@ -29,8 +29,8 @@ namespace Recursion
             //проверяем число:
             CollatzRec(number);
             //вычисляем длину Улама:
-            //var len = UlamLength(number);
-            var len = UlamLengthIter(number);
+            int len = UlamLength(number);
+            //var len = UlamLengthIter(number);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             Console.WriteLine();
