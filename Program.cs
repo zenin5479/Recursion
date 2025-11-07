@@ -21,21 +21,21 @@ namespace Recursion
 
          Console.Title = "Задача Коллаца";
          //бесконечный цикл ввода данных - пока пользователь не закроет программу:
-         while (true)
-         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Введите число для проверки >  ");
-            var number = Convert.ToUInt32(Console.ReadLine());
-            //проверяем число:
-            CollatzRec(number);
-            //вычисляем длину Улама:
-            //var len = UlamLength(number);
-            var len = UlamLengthIter(number);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Длина цикла для числа " + number + " = " + len);
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-         }
+         //while (true)
+         //{
+         Console.ForegroundColor = ConsoleColor.Yellow;
+         Console.Write("Введите число для проверки >  ");
+         var number = Convert.ToUInt32(Console.ReadLine());
+         //проверяем число:
+         CollatzRec(number);
+         //вычисляем длину Улама:
+         //var len = UlamLength(number);
+         var len = UlamLengthIter(number);
+         Console.ForegroundColor = ConsoleColor.Green;
+         Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+         Console.WriteLine();
+         Console.ForegroundColor = ConsoleColor.Yellow;
+         //}
 
          //Console.ReadKey();
       }
@@ -74,8 +74,6 @@ namespace Recursion
          }
          return len;
       }
-
-
 
       public static void Print(string str, int n)
       {
