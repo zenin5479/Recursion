@@ -19,7 +19,6 @@ namespace Recursion
          PrintRec(pop, 3);
          Console.ForegroundColor = ConsoleColor.Red;
 
-
          Console.ReadKey();
       }
 
