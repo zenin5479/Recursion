@@ -4,7 +4,7 @@ namespace Recursion
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Yellow;
