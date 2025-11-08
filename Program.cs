@@ -78,7 +78,7 @@ namespace Recursion
 
       private static int UlamLengthIter(uint number)
       {
-         var len = 0;
+         int len = 0;
          while (number > 1)
          {
             if (number % 2 != 0)
@@ -99,12 +99,18 @@ namespace Recursion
       public static void Print(string str, int n)
       {
          for (int i = 0; i < n; ++i)
+         {
             Console.WriteLine(str);
+         }
       }
 
       static void PrintWhile(string str, int n)
       {
-         if (n < 1) return;
+         if (n < 1)
+         {
+            return;
+         }
+
          while (n-- != 0)
          {
             Console.WriteLine(str);
@@ -114,7 +120,11 @@ namespace Recursion
       public static void PrintRec(string str, int n)
       {
          Console.WriteLine("n = " + n);
-         if (n < 1) return;
+         if (n < 1)
+         {
+            return;
+         }
+
          Console.WriteLine(str);
          PrintRec(str, --n);
       }
