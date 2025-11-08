@@ -22,9 +22,7 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Red;
 
          Console.Title = "Задача Коллаца";
-         // Бесконечный цикл ввода данных - пока пользователь не закроет программу:
-         while (true)
-         {
+      
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Введите число для проверки >  ");
             var number = Convert.ToUInt32(Console.ReadLine());
@@ -37,7 +35,7 @@ namespace Recursion
             Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;
-         }
+         
 
          //Console.ReadKey();
       }
