@@ -21,20 +21,19 @@ namespace Recursion
          PrintRec(pop, 3);
          Console.ForegroundColor = ConsoleColor.Red;
 
-         Console.Title = "Задача Коллаца";
          Console.ForegroundColor = ConsoleColor.Yellow;
+         Console.WriteLine("Задача Коллаца");
          Console.Write("Введите число для проверки >  ");
          var number = Convert.ToUInt32(Console.ReadLine());
-         // Проверяем число:
+         // Проверяем число
          CollatzRec(number);
-         // Вычисляем длину Улама:
+         // Вычисляем длину Улама
          int len = UlamLength(number);
          Console.ForegroundColor = ConsoleColor.Green;
          Console.WriteLine("Длина цикла для числа " + number + " = " + len);
          Console.WriteLine();
          Console.ForegroundColor = ConsoleColor.Yellow;
-
-
+         
          Console.ReadKey();
       }
 
