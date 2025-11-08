@@ -33,7 +33,7 @@ namespace Recursion
          Console.WriteLine("Длина цикла для числа " + number + " = " + len);
          Console.WriteLine();
          Console.ForegroundColor = ConsoleColor.Yellow;
-         
+
          Console.ReadKey();
       }
 
