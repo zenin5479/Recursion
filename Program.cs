@@ -75,26 +75,6 @@ namespace Recursion
          }
       }
 
-      private static int UlamLengthIter(uint number)
-      {
-         int len = 0;
-         while (number > 1)
-         {
-            if (number % 2 != 0)
-            {
-               number = number * 3 + 1;
-            }
-            else
-            {
-               number /= 2;
-            }
-
-            ++len;
-         }
-
-         return len;
-      }
-
       public static void Print(string str, int n)
       {
          for (int i = 0; i < n; ++i)
