@@ -22,22 +22,21 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Red;
 
          Console.Title = "Задача Коллаца";
-      
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Введите число для проверки >  ");
-            var number = Convert.ToUInt32(Console.ReadLine());
-            // Проверяем число:
-            CollatzRec(number);
-            // Вычисляем длину Улама:
-            //int len = UlamLength(number);
-            int len = UlamLengthIter(number);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Длина цикла для числа " + number + " = " + len);
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-         
+         Console.ForegroundColor = ConsoleColor.Yellow;
+         Console.Write("Введите число для проверки >  ");
+         var number = Convert.ToUInt32(Console.ReadLine());
+         // Проверяем число:
+         CollatzRec(number);
+         // Вычисляем длину Улама:
+         //int len = UlamLength(number);
+         int len = UlamLengthIter(number);
+         Console.ForegroundColor = ConsoleColor.Green;
+         Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+         Console.WriteLine();
+         Console.ForegroundColor = ConsoleColor.Yellow;
 
-         //Console.ReadKey();
+
+         Console.ReadKey();
       }
 
       private static void CollatzRec(uint number, int len = 0)
