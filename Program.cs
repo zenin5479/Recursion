@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Рекурсия
+
 namespace Recursion
 {
    internal class Program
