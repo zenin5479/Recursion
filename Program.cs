@@ -27,8 +27,9 @@ namespace Recursion
          }
 
          // Восстановление исходного цвета консоли
-         Console.ResetColor();
+
          Console.WriteLine("Восстановлены исходные цвета консоли");
+         Console.ResetColor();
 
          Console.ReadKey();
       }
