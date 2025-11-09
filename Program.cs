@@ -19,7 +19,7 @@ namespace Recursion
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Последовательность Коллатца:");
             PrintSequence(n);
-            Console.WriteLine($"\nДлина последовательности: {GetSequenceLength(n)}");
+            Console.WriteLine("\nДлина последовательности: {0}", GetSequenceLength(n));
             Console.WriteLine($"Максимальный элемент: {GetMaxElement(n)}");
          }
          else
@@ -39,7 +39,6 @@ namespace Recursion
       static void PrintSequence(int n)
       {
          Console.Write($"{n} ");
-
          if (n == 1)
          {
             return;
