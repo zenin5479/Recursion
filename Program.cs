@@ -27,7 +27,7 @@ namespace Recursion
          }
 
          // Восстановление исходного цвета консоли
-
+         Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Восстановлены исходные цвета консоли");
          Console.ResetColor();
 
