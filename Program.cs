@@ -14,6 +14,23 @@ namespace Recursion
          Console.WriteLine("Задача Коллаца");
          Console.ForegroundColor = ConsoleColor.Blue;
          Console.Write("Введите число для проверки >  ");
+         Console.Write("Введите начальное число: ");
+         if (int.TryParse(Console.ReadLine(), out int n) && n > 0)
+         {
+            Console.WriteLine("\nПоследовательность Коллатца:");
+            PrintSequence(n);
+
+            Console.WriteLine($"\nДлина последовательности: {GetSequenceLength(n)}");
+            Console.WriteLine($"Максимальный элемент: {GetMaxElement(n)}");
+         }
+         else
+         {
+            Console.WriteLine("Ошибка: введите положительное целое число.");
+         }
+
+
+
+
          uint number = Convert.ToUInt32(Console.ReadLine());
          // Проверяем число
          CollatzRec(number);
