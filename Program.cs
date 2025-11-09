@@ -77,17 +77,5 @@ namespace Recursion
          }
       }
 
-      static void PrintWhile(string str, int n)
-      {
-         if (n < 1)
-         {
-            return;
-         }
-
-         while (n-- != 0)
-         {
-            Console.WriteLine(str);
-         }
-      }
    }
 }
