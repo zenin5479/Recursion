@@ -18,7 +18,6 @@ namespace Recursion
          {
             Console.WriteLine("\nПоследовательность Коллатца:");
             PrintSequence(n);
-
             Console.WriteLine($"\nДлина последовательности: {GetSequenceLength(n)}");
             Console.WriteLine($"Максимальный элемент: {GetMaxElement(n)}");
          }
@@ -39,12 +38,19 @@ namespace Recursion
       {
          Console.Write($"{n} ");
 
-         if (n == 1) return;
+         if (n == 1)
+         {
+            return;
+         }
 
          if (n % 2 == 0)
+         {
             PrintSequence(n / 2);
+         }
          else
+         {
             PrintSequence(3 * n + 1);
+         }
       }
 
       // Рекурсивный расчет длины последовательности
