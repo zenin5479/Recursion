@@ -13,7 +13,6 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Green;
          Console.WriteLine("Задача Коллаца");
          Console.ForegroundColor = ConsoleColor.Blue;
-         Console.Write("Введите число для проверки >  ");
          Console.Write("Введите начальное число: ");
          if (int.TryParse(Console.ReadLine(), out int n) && n > 0)
          {
@@ -28,12 +27,6 @@ namespace Recursion
             Console.WriteLine("Ошибка: введите положительное целое число.");
          }
 
-
-
-
-         uint number = Convert.ToUInt32(Console.ReadLine());
-         // Проверяем число
-         CollatzRec(number);
          // Восстановление исходного цвета консоли
          Console.ResetColor();
          Console.WriteLine("Восстановлены исходные цвета консоли");
