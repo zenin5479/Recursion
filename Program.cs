@@ -50,12 +50,17 @@ namespace Recursion
       // Рекурсивный расчет длины последовательности
       static int GetSequenceLength(int n)
       {
-         if (n == 1) return 1;
+         if (n == 1)
+         {
+            return 1;
+         }
 
          if (n % 2 == 0)
+         {
             return 1 + GetSequenceLength(n / 2);
-         else
-            return 1 + GetSequenceLength(3 * n + 1);
+         }
+
+         return 1 + GetSequenceLength(3 * n + 1);
       }
 
       // Рекурсивный поиск максимального элемента
@@ -66,12 +71,17 @@ namespace Recursion
 
       static int GetMaxElement(int n, int currentMax)
       {
-         if (n == 1) return currentMax;
+         if (n == 1)
+         {
+            return currentMax;
+         }
 
          if (n % 2 == 0)
+         {
             return GetMaxElement(n / 2, Math.Max(currentMax, n / 2));
-         else
-            return GetMaxElement(3 * n + 1, Math.Max(currentMax, 3 * n + 1));
+         }
+
+         return GetMaxElement(3 * n + 1, Math.Max(currentMax, 3 * n + 1));
       }
    }
 }
