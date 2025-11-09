@@ -17,7 +17,6 @@ namespace Recursion
          var number = Convert.ToUInt32(Console.ReadLine());
          // Проверяем число
          CollatzRec(number);
-         //Console.WriteLine("Длина цикла для числа " + number + " = " + len);
          // Восстановление исходного цвета консоли
          Console.ResetColor();
          Console.WriteLine("Восстановлены исходные цвета консоли");
