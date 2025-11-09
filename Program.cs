@@ -29,11 +29,12 @@ namespace Recursion
          Console.WriteLine("Шаг " + len + " > " + number);
          if (number <= 1)
          {
-            // Ввыводим длину цикла в текстовое окно:
+            // Ввыводим длину цикла
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             return;
          }
+
          if (number % 2 != 0)
          {
             CollatzRec(number * 3 + 1, ++len);
