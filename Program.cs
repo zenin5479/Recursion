@@ -89,17 +89,5 @@ namespace Recursion
             Console.WriteLine(str);
          }
       }
-
-      public static void PrintRec(string str, int n)
-      {
-         Console.WriteLine("n = " + n);
-         if (n < 1)
-         {
-            return;
-         }
-
-         Console.WriteLine(str);
-         PrintRec(str, --n);
-      }
    }
 }
