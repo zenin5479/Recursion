@@ -10,9 +10,9 @@ namespace Recursion
       {
          Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Yellow;
-         Console.ForegroundColor = ConsoleColor.Green;
-         Console.ForegroundColor = ConsoleColor.Blue;
-         Console.ForegroundColor = ConsoleColor.Red;
+         //Console.ForegroundColor = ConsoleColor.Green;
+         //Console.ForegroundColor = ConsoleColor.Blue;
+         //Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Задача Коллаца");
          Console.Write("Введите число для проверки >  ");
          var number = Convert.ToUInt32(Console.ReadLine());
@@ -23,7 +23,7 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Green;
          Console.WriteLine("Длина цикла для числа " + number + " = " + len);
          Console.WriteLine();
-         Console.ForegroundColor = ConsoleColor.Green;
+         Console.ForegroundColor = ConsoleColor.Blue;
 
          // Восстановление исходного цвета консоли
          Console.ResetColor();
