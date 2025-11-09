@@ -22,7 +22,6 @@ namespace Recursion
          int len = UlamLength(number);
          Console.ForegroundColor = ConsoleColor.Green;
          Console.WriteLine("Длина цикла для числа " + number + " = " + len);
-         Console.WriteLine();
          Console.ForegroundColor = ConsoleColor.Blue;
 
          // Восстановление исходного цвета консоли
@@ -68,7 +67,5 @@ namespace Recursion
             return 1 + UlamLength(number / 2);
          }
       }
-
-
    }
 }
