@@ -11,7 +11,6 @@ namespace Recursion
          Console.ForegroundColor = ConsoleColor.Yellow;
          Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Green;
-         
          Console.WriteLine("Задача Коллаца");
          Console.ForegroundColor = ConsoleColor.Blue;
          Console.Write("Введите число для проверки >  ");
