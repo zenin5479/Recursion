@@ -10,20 +10,20 @@ namespace Recursion
       {
          Console.ForegroundColor = ConsoleColor.Yellow;
          Console.Title = "Рекурсия";
-         
-         //Console.ForegroundColor = ConsoleColor.Green;
-         //Console.ForegroundColor = ConsoleColor.Blue;
+         Console.ForegroundColor = ConsoleColor.Green;
+       
          //Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Задача Коллаца");
+         Console.ForegroundColor = ConsoleColor.Blue;
          Console.Write("Введите число для проверки >  ");
          var number = Convert.ToUInt32(Console.ReadLine());
          // Проверяем число
          CollatzRec(number);
          // Вычисляем длину Улама
          int len = UlamLength(number);
-         Console.ForegroundColor = ConsoleColor.Green;
+         Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Длина цикла для числа " + number + " = " + len);
-         Console.ForegroundColor = ConsoleColor.Blue;
+         
 
          // Восстановление исходного цвета консоли
          Console.ResetColor();
