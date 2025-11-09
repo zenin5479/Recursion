@@ -14,7 +14,7 @@ namespace Recursion
          Console.WriteLine("Задача Коллаца");
          Console.ForegroundColor = ConsoleColor.Blue;
          Console.Write("Введите число для проверки >  ");
-         var number = Convert.ToUInt32(Console.ReadLine());
+         uint number = Convert.ToUInt32(Console.ReadLine());
          // Проверяем число
          CollatzRec(number);
          // Восстановление исходного цвета консоли
