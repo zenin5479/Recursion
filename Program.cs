@@ -8,8 +8,9 @@ namespace Recursion
    {
       static void Main()
       {
-         Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Yellow;
+         Console.Title = "Рекурсия";
+         
          //Console.ForegroundColor = ConsoleColor.Green;
          //Console.ForegroundColor = ConsoleColor.Blue;
          //Console.ForegroundColor = ConsoleColor.Red;
@@ -26,7 +27,7 @@ namespace Recursion
 
          // Восстановление исходного цвета консоли
          Console.ResetColor();
-         Console.WriteLine("\nВосстановлены исходные цвета консоли");
+         Console.WriteLine("Восстановлены исходные цвета консоли");
 
          Console.ReadKey();
       }
