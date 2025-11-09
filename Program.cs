@@ -17,9 +17,9 @@ namespace Recursion
          var number = Convert.ToUInt32(Console.ReadLine());
          // Проверяем число
          CollatzRec(number);
-         int len = UlamLength(number);
+         //int len = UlamLength(number);
          Console.ForegroundColor = ConsoleColor.Red;
-         Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+         //Console.WriteLine("Длина цикла для числа " + number + " = " + len);
          // Восстановление исходного цвета консоли
          Console.ResetColor();
          Console.WriteLine("Восстановлены исходные цвета консоли");
@@ -34,7 +34,7 @@ namespace Recursion
          {
             // Ввыводим длину цикла в текстовое окно:
             Console.ForegroundColor = ConsoleColor.Green;
-            //Console.WriteLine("Длина цикла для числа " + number + " = " + len);
+            Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             return;
          }
          if (number % 2 != 0)
