@@ -8,22 +8,23 @@ namespace Recursion
    {
       static void Main()
       {
-         Console.ForegroundColor = ConsoleColor.Yellow;
+
          Console.Title = "Рекурсия";
-         Console.ForegroundColor = ConsoleColor.Green;
+         Console.ForegroundColor = ConsoleColor.Yellow;
          Console.WriteLine("Задача Коллаца");
-         Console.ForegroundColor = ConsoleColor.Blue;
+         Console.ForegroundColor = ConsoleColor.Green;
          Console.Write("Введите начальное число: ");
          if (int.TryParse(Console.ReadLine(), out int n) && n > 0)
          {
-            Console.WriteLine("\nПоследовательность Коллатца:");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Последовательность Коллатца:");
             PrintSequence(n);
             Console.WriteLine($"\nДлина последовательности: {GetSequenceLength(n)}");
             Console.WriteLine($"Максимальный элемент: {GetMaxElement(n)}");
          }
          else
          {
-            Console.WriteLine("Ошибка: введите положительное целое число.");
+            Console.WriteLine("Ошибка: введите положительное целое число");
          }
 
          // Восстановление исходного цвета консоли
