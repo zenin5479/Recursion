@@ -38,7 +38,7 @@ namespace Recursion
       // Рекурсивный вывод последовательности
       static void PrintSequence(int n)
       {
-         Console.Write($"{n} ");
+         Console.Write("{0}", n);
          if (n == 1)
          {
             return;
