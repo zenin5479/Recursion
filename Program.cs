@@ -8,7 +8,6 @@ namespace Recursion
    {
       static void Main()
       {
-
          Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Yellow;
          Console.WriteLine("Задача Коллаца");
