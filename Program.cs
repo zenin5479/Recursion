@@ -30,6 +30,10 @@ namespace Recursion
          Console.WriteLine();
          Console.ForegroundColor = ConsoleColor.Yellow;
 
+         // Восстановление исходного цвета консоли
+         Console.ResetColor();
+         Console.WriteLine("\nВосстановлены исходн цвета консоли ...");
+
          Console.ReadKey();
       }
 
