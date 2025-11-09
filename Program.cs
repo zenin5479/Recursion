@@ -20,7 +20,7 @@ namespace Recursion
             Console.WriteLine("Последовательность Коллатца:");
             PrintSequence(n);
             Console.WriteLine("\nДлина последовательности: {0}", GetSequenceLength(n));
-            Console.WriteLine($"Максимальный элемент: {GetMaxElement(n)}");
+            Console.WriteLine("Максимальный элемент: {0}", GetMaxElement(n));
          }
          else
          {
