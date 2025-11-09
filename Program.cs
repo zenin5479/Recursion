@@ -10,11 +10,7 @@ namespace Recursion
       {
          Console.Title = "Рекурсия";
          Console.ForegroundColor = ConsoleColor.Yellow;
-         string pop = "У попа была собака, он её любил.\n\r";
-         pop += "Она съела кусок мяса - он её убил.\n\r";
-         pop += "В землю закопал,\n\r";
-         pop += "Надпись написал:\n\r";
-         Print(pop, 3);
+        
          Console.ForegroundColor = ConsoleColor.Green;
          PrintWhile(pop, 3);
          Console.ForegroundColor = ConsoleColor.Blue;
