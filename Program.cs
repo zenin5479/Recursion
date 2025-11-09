@@ -33,7 +33,7 @@ namespace Recursion
          if (number <= 1)
          {
             // Ввыводим длину цикла в текстовое окно:
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Длина цикла для числа " + number + " = " + len);
             return;
          }
@@ -44,23 +44,6 @@ namespace Recursion
          else
          {
             CollatzRec(number / 2, ++len);
-         }
-      }
-
-      private static int UlamLength(uint number)
-      {
-         if (number <= 1)
-         {
-            return 0;
-         }
-
-         if (number % 2 != 0)
-         {
-            return 1 + UlamLength(number * 3 + 1);
-         }
-         else
-         {
-            return 1 + UlamLength(number / 2);
          }
       }
    }
