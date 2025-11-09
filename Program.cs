@@ -41,25 +41,44 @@ namespace Recursion
          Console.ReadKey();
       }
 
-      private static void CollatzRec(uint number, int len = 0)
+      // Рекурсивный вывод последовательности
+      static void PrintSequence(int n)
       {
-         Console.WriteLine("Шаг " + len + " > " + number);
-         if (number <= 1)
-         {
-            // Ввыводим длину цикла
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Длина цикла для числа " + number + " = " + len);
-            return;
-         }
+         Console.Write($"{n} ");
 
-         if (number % 2 != 0)
-         {
-            CollatzRec(number * 3 + 1, ++len);
-         }
+         if (n == 1) return;
+
+         if (n % 2 == 0)
+            PrintSequence(n / 2);
          else
-         {
-            CollatzRec(number / 2, ++len);
-         }
+            PrintSequence(3 * n + 1);
+      }
+
+      // Рекурсивный расчет длины последовательности
+      static int GetSequenceLength(int n)
+      {
+         if (n == 1) return 1;
+
+         if (n % 2 == 0)
+            return 1 + GetSequenceLength(n / 2);
+         else
+            return 1 + GetSequenceLength(3 * n + 1);
+      }
+
+      // Рекурсивный поиск максимального элемента
+      static int GetMaxElement(int n)
+      {
+         return GetMaxElement(n, n);
+      }
+
+      static int GetMaxElement(int n, int currentMax)
+      {
+         if (n == 1) return currentMax;
+
+         if (n % 2 == 0)
+            return GetMaxElement(n / 2, Math.Max(currentMax, n / 2));
+         else
+            return GetMaxElement(3 * n + 1, Math.Max(currentMax, 3 * n + 1));
       }
    }
 }
