@@ -69,13 +69,6 @@ namespace Recursion
          }
       }
 
-      public static void Print(string str, int n)
-      {
-         for (int i = 0; i < n; ++i)
-         {
-            Console.WriteLine(str);
-         }
-      }
 
    }
 }
