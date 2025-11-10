@@ -28,11 +28,9 @@ namespace Recursion
             Console.WriteLine("Ошибка: введите положительное целое число");
          }
 
-         
          // Восстановление исходного цвета консоли
          Console.WriteLine("Восстановлены исходные цвета консоли");
          Console.ResetColor();
-
 
          Console.ReadKey();
       }
