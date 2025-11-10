@@ -19,6 +19,7 @@ namespace Recursion
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Последовательность Коллатца:");
             PrintSequence(n);
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nДлина последовательности: {0}", GetSequenceLength(n));
             Console.WriteLine("Максимальный элемент: {0}", GetMaxElement(n));
          }
@@ -28,7 +29,7 @@ namespace Recursion
          }
 
          // Восстановление исходного цвета консоли
-         Console.ForegroundColor = ConsoleColor.Red;
+
          Console.WriteLine("Восстановлены исходные цвета консоли");
          Console.ResetColor();
 
