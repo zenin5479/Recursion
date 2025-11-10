@@ -13,7 +13,8 @@ namespace Recursion
          Console.WriteLine("Задача Коллаца");
          Console.ForegroundColor = ConsoleColor.Green;
          Console.Write("Введите начальное число: ");
-         if (int.TryParse(Console.ReadLine(), out int n) && n > 0)
+         bool digit = int.TryParse(Console.ReadLine(), out int n);
+         if (digit && n > 0)
          {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Последовательность Коллатца:");
